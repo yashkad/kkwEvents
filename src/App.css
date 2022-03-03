@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.cardHover :hover{
+  background-color: rgba(129, 124, 124, 0.246);
+}
