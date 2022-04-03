@@ -3,40 +3,40 @@ import React from "react";
 const Form = () => {
   return (
     <div>
-      {/* <section class="hero is-info is-small">
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <p class="title">Modal Cards</p>
-            <p class="subtitle">Subtitle</p>
+      {/* <section className="hero is-info is-small">
+        <div className="hero-body">
+          <div className="container has-text-centered">
+            <p className="title">Modal Cards</p>
+            <p className="subtitle">Subtitle</p>
           </div>
         </div>
       </section> */}
      
-      {/* <div class="box cta">
-        <p class="has-text-centered">
-          <span class="tag is-primary">New</span> Here we have modal cards. When
+      {/* <div className="box cta">
+        <p className="has-text-centered">
+          <span className="tag is-primary">New</span> Here we have modal cards. When
           you click on them they will open functional modal examples.
         </p>
       </div> */}
      
-      <section class="container">
-        <div class="columns features">
+      <section className="container">
+        <div className="columns features">
 
-          <div class="column is-4">
+          <div className="column is-4">
 
-            <div class="card is-shady">
-              <div class="card-image">
-                <figure class="image is-4by3">
+            <div className="card is-shady">
+              <div className="card-image">
+                <figure className="image is-4by3">
                   <img
                     src="https://source.unsplash.com/RWnpyGtY1aU"
                     alt="Placeholder image"
-                    class="modal-button"
+                    className="modal-button"
                     data-target="modal-image2"
                   />
                 </figure>
               </div>
-              <div class="card-content">
-                <div class="content">
+              <div className="card-content">
+                <div className="content">
                   <h4>Click on image above</h4>
                   <p>
                     Purus semper eget duis at tellus at urna condimentum mattis.
@@ -45,7 +45,7 @@ const Form = () => {
                     consequat semper viverra nam.
                   </p>
                   <span
-                    class="button is-link modal-button"
+                    className="button is-link modal-button"
                     data-target="modal-image2"
                   >
                     Image modal
@@ -56,18 +56,18 @@ const Form = () => {
 
           </div>
         
-          <div class="column is-4">
-            <div class="card is-shady">
-              <div class="card-image">
-                <figure class="image is-4by3">
+          <div className="column is-4">
+            <div className="card is-shady">
+              <div className="card-image">
+                <figure className="image is-4by3">
                   <img
                     src="https://source.unsplash.com/6Ticnhs1AG0"
                     alt="Placeholder image"
                   />
                 </figure>
               </div>
-              <div class="card-content">
-                <div class="content">
+              <div className="card-content">
+                <div className="content">
                   <h4>Tempor orci dapibus faber in.</h4>
                   <p>
                     Ut venenatis tellus in metus vulputate. Amet consectetur
@@ -77,7 +77,7 @@ const Form = () => {
                     risus.
                   </p>
                   <span
-                    class="button is-link modal-button"
+                    className="button is-link modal-button"
                     data-target="modal-card"
                   >
                     Modal Card
@@ -87,18 +87,18 @@ const Form = () => {
             </div>
           </div>
     
-          <div class="column is-4 modal-button" data-target="modal-image">
-            <div class="card is-shady">
-              <div class="card-image">
-                <figure class="image is-4by3">
+          <div className="column is-4 modal-button" data-target="modal-image">
+            <div className="card is-shady">
+              <div className="card-image">
+                <figure className="image is-4by3">
                   <img
                     src="https://res.cloudinary.com/ameo/image/upload/v1568711475/pexels-photo-1302883_fjje0f.jpg"
                     alt="Placeholder image"
                   />
                 </figure>
               </div>
-              <div class="card-content">
-                <div class="content">
+              <div className="card-content">
+                <div className="content">
                   <h4>Click anywhere on card</h4>
                   <p>
                     Imperdiet dui accumsan sit amet nulla facilisi morbi. Fusce
@@ -107,7 +107,7 @@ const Form = () => {
                     maecenas accumsan lacus vel facilisis.
                   </p>
                   <span
-                    class="button is-link modal-button"
+                    className="button is-link modal-button"
                     data-target="modal-image"
                   >
                     Image modal
@@ -118,19 +118,19 @@ const Form = () => {
           </div>
         </div>
 
-        <div class="columns features">
-          <div class="column is-4 modal-button" data-target="modal-card">
-            <div class="card is-shady">
-              <div class="card-image">
-                <figure class="image is-4by3">
+        <div className="columns features">
+          <div className="column is-4 modal-button" data-target="modal-card">
+            <div className="card is-shady">
+              <div className="card-image">
+                <figure className="image is-4by3">
                   <img
                     src="https://res.cloudinary.com/ameo/image/upload/v1568711475/pexels-photo-1302883_fjje0f.jpg"
                     alt="Placeholder image"
                   />
                 </figure>
               </div>
-              <div class="card-content">
-                <div class="content">
+              <div className="card-content">
+                <div className="content">
                   <h4>
                     Click anywhere on card to <br />
                     expand into modal card
@@ -141,25 +141,25 @@ const Form = () => {
                     tincidunt vitae semper quis. Accumsan tortor posuere ac ut
                     consequat semper viverra nam.
                   </p>
-                  <span class="button is-link modal-button">Modal card</span>
+                  <span className="button is-link modal-button">Modal card</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="column is-4">
-            <div class="card is-shady">
-              <div class="card-image">
-                <figure class="image is-4by3">
+          <div className="column is-4">
+            <div className="card is-shady">
+              <div className="card-image">
+                <figure className="image is-4by3">
                   <img
                     src="https://source.unsplash.com/hLyd1LukQ7E"
                     alt="butterfly image"
-                    class="modal-button"
+                    className="modal-button"
                     data-target="modal-image4"
                   />
                 </figure>
               </div>
-              <div class="card-content  modal-button" data-target="modal-card2">
-                <div class="content">
+              <div className="card-content  modal-button" data-target="modal-card2">
+                <div className="content">
                   <h4>
                     Click anywhere on card to <br />
                     expand into modal card - header image expands into bigger
@@ -170,7 +170,7 @@ const Form = () => {
                     Non blandit massa enim nec. Integer enim neque volutpat ac
                     tincidunt vitae semper quis.
                   </p>
-                  <span class="button is-link modal-button">Modal card</span>
+                  <span className="button is-link modal-button">Modal card</span>
                 </div>
               </div>
             </div>

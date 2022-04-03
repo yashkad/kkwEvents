@@ -4,17 +4,18 @@ import Card from "./Card";
 import CardRow from "./CardRow";
 import Form from "./Form";
 import Navbar from "./Navbar";
-import SingleCard from "./SingleCard";
-import FirebaseForm from './FirebaseForm'
+import FirebaseForm from "./FirebaseForm";
+import EventDetails from "./EventDetails";
 const Home = () => {
   return (
     <div className="main">
       {/* <Form /> */}
-      {/* <SingleCard /> */}
-     {/* <CardRow />
-     <CardRow />
-     <CardRow /> */}
-     <FirebaseForm />
+      {/* <EventDetails /> */}
+      <CardRow />
+      {/* <CardRow /> */}
+      {/* <CardRow /> */}
+
+      {/* <FirebaseForm /> */}
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer p-4">
+    <footer className="footer p-4" style={{ position: "sticky", bottom: 0 }}>
       <div className="content has-text-centered">
         <p>
           <strong>KKW Events</strong> by{" "}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Login from "./Login";
 const Navbar = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -14,8 +14,8 @@ const Navbar = () => {
         role="navigation"
         aria-label="main navigation"
       >
-        <div class="navbar-brand">
-          <div class="navbar-item" href="https://bulma.io">
+        <div className="navbar-brand">
+          <div className="navbar-item" href="https://bulma.io">
             {/* <img
               src="https://bulma.io/images/bulma-logo.png"
               width="112"
@@ -26,7 +26,7 @@ const Navbar = () => {
 
           {/* <a
             role="button"
-            class="navbar-burger"
+            className="navbar-burger"
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarBasicExample"
@@ -39,16 +39,20 @@ const Navbar = () => {
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
-            <Link to="/" replace className="navbar-item">
+            <NavLink to="/" replace className="navbar-item">
               Home
-            </Link>
+            </NavLink>
 
-            <Link to="/about" className="navbar-item">
-              About
-            </Link>
+            <NavLink to="/about" className="navbar-item">
+              Form
+            </NavLink>
 
-            <div className="navbar-item has-dropdown is-hoverable">
-              <a className="navbar-link">More</a>
+            <NavLink to="/invite" className="navbar-item">
+              Invite
+            </NavLink>
+
+            {/* <div className="navbar-item has-dropdown is-hoverable">
+              <a className="navbar-Navlink">More</a>
 
               <div className="navbar-dropdown">
                 <a className="navbar-item">About</a>
@@ -57,7 +61,7 @@ const Navbar = () => {
                 <hr className="navbar-divider" />
                 <a className="navbar-item">Report an issue</a>
               </div>
-            </div>
+            </div> */}
           </div>
           {/* <div className="navbar-center">
             <div className="navbar-item">

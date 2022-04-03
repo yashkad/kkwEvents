@@ -7,16 +7,36 @@ import { Routes, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 
+import FirebaseForm from "./components/FirebaseForm";
+import { createContext, useState } from "react";
+import InviteForm from "./components/InviteForm";
+import EventDetails from "./components/EventDetails";
+
+export const EventContext = createContext();
+
 function App() {
+  const [imgUrl, setImgUrl] = useState("");
+  const data = {
+    imgUrl: imgUrl,
+    setImgUrl: (e) => {
+      setImgUrl(e);
+      console.log("Url is now ", e);
+    },
+  };
+
   return (
-    <div className="App main">
-      <Navbar />
-      <Routes>
-        <Route path="/" exact element={<Home />} />
-        <Route path="about" element={<Footer />} />
-      </Routes>
-      <Footer />
-    </div>
+    <EventContext.Provider value={data}>
+      <div className="App main">
+        <Navbar />
+        <Routes>
+          <Route path="/" exact element={<Home />} />
+          <Route path="about" element={<FirebaseForm />} />
+          <Route path="invite" element={<InviteForm />} />
+          <Route path="/eventDetails/:eventId" element={<EventDetails />} />
+        </Routes>
+        <Footer />
+      </div>
+    </EventContext.Provider>
 
     // <div className="App main">
     //   <div className="mx-5 my-5 ">

@@ -1,5 +1,5 @@
-*{
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
 }
 
@@ -42,6 +42,15 @@
   }
 }
 
-.cardHover :hover{
+.cardHover :hover {
   background-color: rgba(129, 124, 124, 0.246);
+}
+
+.cardItem {
+  flex: 1;
+  min-width: 20rem;
+  max-width: 20rem;
+  min-height: 10rem;
+  overflow: hidden;
+  padding: 1rem;
 }
