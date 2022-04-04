@@ -128,13 +128,15 @@ const Form = () => {
   };
 
   const handleEdit = (item) => {
-    const { name, department, topic, id, email, date, totalStud } = item;
+    const { name, department, topic, id, email, date, totalStud, url } = item;
     setName(name);
     setDepartment(department);
     setTopic(topic);
     setEmail(email);
     setDate(date);
     setTotalStud(totalStud);
+    setImg(url);
+    setUploadedUrl(url);
   };
 
   const resetFormFields = () => {
@@ -333,7 +335,6 @@ const Form = () => {
               accept="image/*"
               name="resume"
               onChange={onChangeHandler}
-              required
             />
             <span className="file-cta">
               <span className="file-icon">

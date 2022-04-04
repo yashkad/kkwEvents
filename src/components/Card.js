@@ -7,7 +7,7 @@ const Card = ({ item }) => {
   const navigate = useNavigate();
   const handleClick = () => {
     // navigate("/about");
-    navigate(`eventDetails/${item.id}`);
+    navigate(`/eventDetails/${item.id}`, { replace: true });
   };
   return (
     <div className="card" onClick={() => handleClick()}>

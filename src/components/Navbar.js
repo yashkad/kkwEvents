@@ -1,11 +1,33 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import loginService from "../service/login.service";
 import Login from "./Login";
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
+  const [isLogin, setIsLogin] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const closeModal = () => {
     setShowLogin(false);
   };
+
+  const handleLogin = async (email, pass) => {
+    const data = await loginService.signin();
+    // console.log("Data : ", data.docs);
+    const obj = data.docs.map((item) => ({ ...item.data(), id: item.id }));
+    console.log(obj[0]);
+
+    if (email == obj[0].email && pass == obj[0].password) {
+      // alert("Login successfull");
+      setIsLogin(true);
+      closeModal();
+    } else {
+      // alert("login fail");
+      setIsLogin(false);
+    }
+    // console.log("List : ", list);
+  };
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -21,7 +43,9 @@ const Navbar = () => {
               width="112"
               height="28"
             /> */}
-            <h1 className="title">KKW Events</h1>
+            <h1 className="title" onClick={() => navigate("/")}>
+              KKW Events
+            </h1>
           </div>
 
           {/* <a
@@ -43,14 +67,17 @@ const Navbar = () => {
               Home
             </NavLink>
 
-            <NavLink to="/about" className="navbar-item">
-              Form
-            </NavLink>
+            {isLogin && (
+              <>
+                <NavLink to="/about" className="navbar-item">
+                  Form
+                </NavLink>
 
-            <NavLink to="/invite" className="navbar-item">
-              Invite
-            </NavLink>
-
+                <NavLink to="/invite" className="navbar-item">
+                  Invite
+                </NavLink>
+              </>
+            )}
             {/* <div className="navbar-item has-dropdown is-hoverable">
               <a className="navbar-Navlink">More</a>
 
@@ -76,10 +103,12 @@ const Navbar = () => {
               </a> */}
                 {/* <a className="button is-light">Log in</a> */}
                 <p
-                  onClick={() => setShowLogin(!showLogin)}
+                  onClick={() => {
+                    isLogin ? setIsLogin(false) : setShowLogin(!showLogin);
+                  }}
                   className="button is-light"
                 >
-                  Log in
+                  {!isLogin ? "Login" : "Logout"}
                 </p>
               </div>
             </div>
@@ -92,7 +121,11 @@ const Navbar = () => {
           <div className="modal-background" onClick={closeModal}></div>
 
           <div className="modal-content ">
-            <Login />
+            <Login
+              onLogin={handleLogin}
+              isLogin={isLogin}
+              handleLogout={() => setIsLogin(false)}
+            />
           </div>
 
           <button

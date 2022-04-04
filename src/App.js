@@ -11,6 +11,8 @@ import FirebaseForm from "./components/FirebaseForm";
 import { createContext, useState } from "react";
 import InviteForm from "./components/InviteForm";
 import EventDetails from "./components/EventDetails";
+import CardRow from "./components/CardRow";
+import UnderConstruction from "./components/UnderConstruction";
 
 export const EventContext = createContext();
 
@@ -32,7 +34,9 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="about" element={<FirebaseForm />} />
           <Route path="invite" element={<InviteForm />} />
+          <Route path="/eventPage" element={<CardRow />} />
           <Route path="/eventDetails/:eventId" element={<EventDetails />} />
+          <Route path="/404" element={<UnderConstruction />} />
         </Routes>
         <Footer />
       </div>

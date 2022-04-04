@@ -6,15 +6,15 @@ import Form from "./Form";
 import Navbar from "./Navbar";
 import FirebaseForm from "./FirebaseForm";
 import EventDetails from "./EventDetails";
+import FirstPage from "./FirstPage/FirstPage";
 const Home = () => {
   return (
     <div className="main">
       {/* <Form /> */}
       {/* <EventDetails /> */}
-      <CardRow />
       {/* <CardRow /> */}
       {/* <CardRow /> */}
-
+      <FirstPage />
       {/* <FirebaseForm /> */}
     </div>
   );
